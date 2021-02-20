@@ -30,3 +30,8 @@ animation-name: go;
   100%   {background-color: #e84851;}
 
 }   
+#fotter {
+position: absolute;
+top: 600px;
+text-align: center;
+}
