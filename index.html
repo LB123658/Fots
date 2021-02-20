@@ -108,11 +108,14 @@ background: #eed141;
 <div id="cartDiv">
 <p class="smallWords">Check to see what's in your cart</p>
 <button id="keepFotting" function="hideCart()">Keep fotting</button>
-
 <button id="checkCart">Check cart</button>
 </div>
 
 <script>
+function hideCart()
+{
+document.getElementById('cartDiv').style.display = "none";
+}
 function reloadPage() {
 location.reload();
 }
@@ -120,10 +123,7 @@ function openPreview()
 {
 document.getElementById('cartDiv').style.visibility="visible";
 }
-function hideCart()
-{
-document.getElementById('cartDiv').style.visibility="hidden";
-}
+
 </script>
 </body>
 </html>
