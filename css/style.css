@@ -19,3 +19,14 @@ color: red;
 a:hover {
 text-decoration: underline;
 }
+fadeIn {
+animation-name: go;
+  animation-duration: 1.9s;
+  animation-iteration-count: 1;
+}
+@keyframes go {
+ 
+  0% {background-color: white;}
+  100%   {background-color: #e84851;}
+
+}   
