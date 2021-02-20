@@ -57,6 +57,43 @@ height: 60px;
 font-size: 25px;
 z-index: 1;
 }
+#cartDiv {
+position: absolute;
+background: lightgrey;
+border-radius: 7px;
+cursor: default;
+top: 70px;
+right: 5px;
+width: 150px;
+visibility: hidden;
+}
+#keepFotting {
+background: #e8c100;
+width: 100%;
+border-radius: 4px;
+border: none;
+cursor: pointer;
+height: 25px;
+}
+#keepFotting:hover {
+background: #eed141;
+}
+.smallWords {
+font-family: arial;
+font-size: 14px;
+text-align: center;
+}
+#checkCart {
+background: #e8c100;
+width: 100%;
+border-radius: 4px;
+border: none;
+cursor: pointer;
+height: 25px;
+}
+#checkCart:hover {
+background: #eed141;
+}
 </style>
 </head>
 <body>
@@ -65,9 +102,28 @@ z-index: 1;
 <button class="topBar" id="recipes">Recipes</button>
 <button class="topBar" id="store">Store</button>
 <button class="topBar" id="more">More</button>
-<button id="cart">Cart(<span id="cartAmount">0</span>)</button>
-
+<button id="cart" onclick="openPreview()">Cart(<span id="cartAmount">0</span>)</button>
 </div>
 
+<div id="cartDiv">
+<p class="smallWords">Check to see what's in your cart</p>
+<button id="keepFotting" function="hideCart()">Keep fotting</button>
+
+<button id="checkCart">Check cart</button>
+</div>
+
+<script>
+function reloadPage() {
+location.reload();
+}
+function openPreview()
+{
+document.getElementById('cartDiv').style.visibility="visible";
+}
+function hideCart()
+{
+document.getElementById('cartDiv').style.visibility="hidden";
+}
+</script>
 </body>
 </html>
