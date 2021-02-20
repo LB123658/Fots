@@ -1,0 +1,21 @@
+#welcomeMessage {
+font-family: futura;
+color: red;
+text-align: center;
+font-size: 50px;
+cusror: default;
+}
+#moreInfo {
+font-family: futura;
+color: grey;
+text-align: center;
+font-size: 18px;
+cusror: default;
+}
+a {
+cursor: pointer;
+color: red;
+}
+a:hover {
+text-decoration: underline;
+}
