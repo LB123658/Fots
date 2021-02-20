@@ -34,12 +34,39 @@ left: 20%;
 font-size: 28px;
 font-weight: normal;
 }
+#store {
+left: 40%;
+font-size: 28px;
+font-weight: normal;
+}
+#more {
+left: 60%;
+font-size: 28px;
+font-weight: normal;
+}
+#cart {
+position: absolute;
+top: 5px;
+right: 5px;
+cursor: pointer;
+border-radius: 5px;
+background: #e8c100;
+border: none;
+width: 150px;
+height: 60px;
+font-size: 25px;
+z-index: 1;
+}
 </style>
 </head>
 <body>
 <div id="topNav">
 <button class="topBar" id="home" onclick="reloadPage()">Fots</button>
 <button class="topBar" id="recipes">Recipes</button>
+<button class="topBar" id="store">Store</button>
+<button class="topBar" id="more">More</button>
+<button id="cart">Cart(<span id="cartAmount">0</span>)</button>
+
 </div>
 
 </body>
