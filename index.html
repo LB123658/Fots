@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Fots</title>
-<link rel='icon' href='Fots shirt(1).png' type='image/png'/ >
-<link rel="stylesheet" href="css/style.css" />
-<head>
-<body onload="welcomeMessage()" id="fadeIn">
-<p id="welcomeMessage">Welcome to the new Fots website!</p>
-<p id="moreInfo">Learn more at <a href="https://sites.google.com/view/fots-/home" target="_blank">the original Fots website</a></p>
-<div id="fotter">
-<?php include 'footer.php';
-echo "$copyright";
-?>
-  </div> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#topNav {
+background: #dc1b1b;
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 70px;
+}
+.topBar {
+width: 20%;
+height: 60px;
+border: 2px solid #dc1b1b;
+background: #dc1b1b;
+font-family: courier new;
+font-size: 30px;
+font-weight: bold;
+color: white;
+cusror: pointer;
+position: absolute;
+top: 5px;
+cursor: pointer;
+border-radius: 5px;
+}
+.topBar:hover {
+border: 2px solid white;
+}
+#recipes {
+left: 20%;
+font-size: 28px;
+font-weight: normal;
+}
+</style>
+</head>
+<body>
+<div id="topNav">
+<button class="topBar" id="home" onclick="reloadPage()">Fots</button>
+<button class="topBar" id="recipes">Recipes</button>
+</div>
+
 </body>
-<script src="js/app.js"></script>
 </html>
