@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,8 +68,9 @@ top: 70px;
 right: 5px;
 width: 150px;
 visibility: hidden;
+z-index: 1;
 }
-#keepFotting {
+#close {
 background: #e8c100;
 width: 100%;
 border-radius: 4px;
@@ -76,7 +78,7 @@ border: none;
 cursor: pointer;
 height: 25px;
 }
-#keepFotting:hover {
+#close:hover {
 background: #eed141;
 }
 .smallWords {
@@ -108,23 +110,23 @@ background: #eed141;
 
 <div id="cartDiv">
 <p class="smallWords">Check to see what's in your cart</p>
-<button id="keepFotting" function="hideCart()">Keep fotting</button>
+<button id="close" onclick="hideCart()">Keep Fotting</button>
 <button id="checkCart">Check cart</button>
 </div>
 
 <script>
 function hideCart()
 {
-document.getElementById('cartDiv').style.display = "none";
+document.getElementById("cartDiv").style.visibility = "hidden";
+}
+
+function openPreview()
+{
+document.getElementById("cartDiv").style.visibility="visible";
 }
 function reloadPage() {
 location.reload();
 }
-function openPreview()
-{
-document.getElementById('cartDiv').style.visibility="visible";
-}
-
 </script>
 </body>
 </html>
