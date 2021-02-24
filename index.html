@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -99,6 +100,36 @@ height: 25px;
 #checkCart:hover {
 background: #eed141;
 }
+#leftDiv {
+position: absolute;
+top: 80px;
+left: 0px;
+width: 20%;
+height: 100%;
+background: white;
+}
+#rightDiv {
+position: absolute;
+top: 80px;
+right: 0px;
+width: 20%;
+height: 100%;
+background: white;
+}
+#centerDiv {
+position: absolute;
+top: 80px;
+left: 20%;
+width: 60%;
+}
+#top {
+width: 100%;
+text-align: center;
+color: red;
+font-family: futura;
+font-weight: bold;
+font-size: 50px;
+}
 </style>
 </head>
 <body>
@@ -114,6 +145,12 @@ background: #eed141;
 <p class="smallWords">Check to see what's in your cart</p>
 <button id="close" onclick="hideCart()">Keep Fotting</button>
 <button id="checkCart">Check cart</button>
+</div>
+<div id="leftDiv"></div>
+<div id="rightDiv"></div>
+<div id="centerDiv">
+<h1 id="top">food + shots = FOTS</h1>
+
 </div>
 
 <script>
