@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,6 +141,22 @@ text-align: justify;
 text-decoration: underline;
 cursor: pointer;
 }
+#sharePage {
+position: absolute;
+top: 150px;
+left: 0px;
+width: 60px;
+height: 60px;
+border: none;
+background: grey;
+color: white;
+cursor: pointer;
+font-size: 18px;
+}
+#sharePage:hover {
+background: lightgrey;
+color: black
+}
 </style>
 </head>
 <body>
@@ -164,8 +178,11 @@ cursor: pointer;
 <div id="centerDiv">
 <h1 id="top">food + shots = FOTS</h1><br>
 <p id="paragraphMain">Welcome to the new Fots website. Now you can never spend another day fotless because there is a wide selection of Fot recipes, merchandise, and more. New merch includes Fot stickers, mugs, shirts, and Fot glasses to drink all your favorite Fots. Check out the Rispe Fot, olive Fot, and crunchy Fot under recipes. <br><span id="tagA">#ZilchingItToAFot</span></p>
-
 </div>
+
+<a href="https://lb123658.github.io/Share-on-social-media/">
+<button id="sharePage" onclick="shareLink()" name="https://lb123658.github.io/Fots/" title="Share this website">Share</button>
+</a>
 
 <script>
 function hideCart()
@@ -180,6 +197,15 @@ document.getElementById("cartDiv").style.visibility="visible";
 function reloadPage() {
 location.reload();
 }
+function shareLink() {
+  var copyText = document.getElementById("pageLink");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Share this page: " + copyText.value);
+}  
 </script>
+
+<input type="text" id="pageLink" value="https://lb123658.github.io/Fots/" hidden>
 </body>
 </html>
