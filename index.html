@@ -217,6 +217,13 @@ cursor: pointer;
 background: lightgrey;
 color: #dc1b1b;
 }
+#cartContents {
+position: absolute;
+top: 80px;
+left: 20%;
+width: 60%;
+visibility: hidden;
+}
 </style>
 </head>
 <body>
@@ -231,7 +238,7 @@ color: #dc1b1b;
 <div id="cartDiv">
 <p class="smallWords">Check to see what's in your cart</p>
 <button id="close" onclick="hideCart()">Keep Fotting</button>
-<button id="checkCart" id="openCart()">Check cart</button>
+<button id="checkCart" onclick="hideCart(); openCart()">Check cart</button>
 </div>
 <div id="leftDiv"></div>
 <div id="rightDiv"></div>
@@ -279,17 +286,21 @@ color: #dc1b1b;
 
 </select>
 <button class="orderFot" onclick="addCart()">Add to cart</button><br><br><br>
-
-
 </div>
 
 
 <div id="elFot">
 <p class="top">More from Fots</p>
 <p class="paragraphMain"><b>How to make an oreo Fot</b><br>1. Open an box of Oreos<br>2. Put all the oreos in a blender<br>3. Blend for five minutes or until it looks done<br>4. Pour the mixture in a shot glass<br>5. Drink your Fot</p>
-
 </div>
 
+
+<div id="cartContents">
+<p class="top">Your cart</p>
+<p class="paragraphMain">Rispe Fot</p>
+<a href="https://drive.google.com/uc?id=1dEZUtfYJq39juAZkThF3lUUnx0R9Onpy&export=download" target="_blank">
+<button class="orderFot" onclick="placeOrder()">Place order</button></a>
+</div>
 
 <a href="https://lb123658.github.io/Share-on-social-media/">
 <button id="sharePage" onclick="shareLink()" name="https://lb123658.github.io/Fots/" title="Share this website">Share</button>
@@ -325,6 +336,7 @@ document.getElementById("centerDiv").style.visibility = "hidden";
 document.getElementById("storeDiv").style.visibility = "hidden";
 document.getElementById("elFot").style.visibility = "hidden";
 document.getElementById("recipeDiv").style.visibility = "visible";
+document.getElementById("cartContents").style.visibility = "hidden";
 }
 function store()
 {
@@ -332,6 +344,7 @@ document.getElementById("centerDiv").style.visibility = "hidden";
 document.getElementById("storeDiv").style.visibility = "visible";
 document.getElementById("elFot").style.visibility = "hidden";
 document.getElementById("recipeDiv").style.visibility = "hidden";
+document.getElementById("cartContents").style.visibility = "hidden";
 }
 function more()
 {
@@ -339,12 +352,20 @@ document.getElementById("centerDiv").style.visibility = "hidden";
 document.getElementById("storeDiv").style.visibility = "hidden";
 document.getElementById("elFot").style.visibility = "visible";
 document.getElementById("recipeDiv").style.visibility = "hidden";
+document.getElementById("cartContents").style.visibility = "hidden";
 }
 function addCart() {
 var x = document.getElementById("rispeNumber").value;
 document.getElementById("cartAmount").innerHTML = x;
 }
-
+function openCart()
+{
+document.getElementById("centerDiv").style.visibility = "hidden";
+document.getElementById("storeDiv").style.visibility = "hidden";
+document.getElementById("elFot").style.visibility = "hidden";
+document.getElementById("recipeDiv").style.visibility = "hidden";
+document.getElementById("cartContents").style.visibility = "visible";
+}
 </script>
 
 <input type="text" id="pageLink" value="https://lb123658.github.io/Fots/" hidden>
