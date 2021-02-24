@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -204,6 +206,19 @@ left: 20%;
 width: 60%;
 visibility: hidden;
 }
+.orderFot {
+height: 30px;
+border: none;
+color: white;
+font-size: 20px;
+background: #dc1b1b;
+float: right;
+cursor: pointer;
+}
+.orderFot:hover {
+background: lightgrey;
+color: #dc1b1b;
+}
 </style>
 </head>
 <body>
@@ -248,8 +263,14 @@ visibility: hidden;
 
 <div id="storeDiv">
 <h1 class="top">Fots official store</h1>
-
-<p class="paragraphMain">The store is loading...</p>
+<br>
+<p class="paragraphMain"><b>Rispe Fot</b><br>Order the recipe for this delicious, dry, crunchy Fot.</p>
+<select class="quantity" id="rispeNumber">
+<option value="0">Select quantity</option>
+<option value="1">1</option>
+<option value="2">2</option>
+</select>
+<button class="orderFot" onclick="addCart()">Add to cart</button>
 </div>
 
 
@@ -305,6 +326,10 @@ document.getElementById("centerDiv").style.visibility = "hidden";
 document.getElementById("storeDiv").style.visibility = "hidden";
 document.getElementById("elFot").style.visibility = "visible";
 document.getElementById("recipeDiv").style.visibility = "hidden";
+}
+function addCart() {
+var x = document.getElementById("rispeNumber").value;
+document.getElementById("cartAmount").innerHTML = x;
 }
 </script>
 
