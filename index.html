@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -199,6 +197,13 @@ left: 20%;
 width: 60%;
 visibility: hidden;
 }
+#elFot {
+position: absolute;
+top: 80px;
+left: 20%;
+width: 60%;
+visibility: hidden;
+}
 </style>
 </head>
 <body>
@@ -248,8 +253,10 @@ visibility: hidden;
 </div>
 
 
-<div id="moreDiv">
-<p class="paragraphMain">Excuse me, I fotted.</p>
+<div id="elFot">
+<p class="top">More from Fots</p>
+<p class="paragraphMain"><b>How to make an oreo Fot</b><br>1. Open an box of Oreos<br>2. Put all the oreos in a blender<br>3. Blend for five minutes or until it looks done<br>4. Pour the mixture in a shot glass<br>5. Drink your Fot</p>
+
 </div>
 
 
@@ -282,21 +289,21 @@ function recipes()
 {
 document.getElementById("centerDiv").style.visibility = "hidden";
 document.getElementById("storeDiv").style.visibility = "hidden";
-document.getElementById("moreDiv").style.visibility = "hidden";
+document.getElementById("elFot").style.visibility = "hidden";
 document.getElementById("recipeDiv").style.visibility = "visible";
 }
 function store()
 {
 document.getElementById("centerDiv").style.visibility = "hidden";
 document.getElementById("storeDiv").style.visibility = "visible";
-document.getElementById("moreDiv").style.visibility = "hidden";
+document.getElementById("elFot").style.visibility = "hidden";
 document.getElementById("recipeDiv").style.visibility = "hidden";
 }
 function more()
 {
 document.getElementById("centerDiv").style.visibility = "hidden";
 document.getElementById("storeDiv").style.visibility = "hidden";
-document.getElementById("moreDiv").style.visibility = "visible";
+document.getElementById("elFot").style.visibility = "visible";
 document.getElementById("recipeDiv").style.visibility = "hidden";
 }
 </script>
