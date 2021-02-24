@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,7 +120,7 @@ top: 80px;
 left: 20%;
 width: 60%;
 }
-#top {
+.top {
 width: 100%;
 text-align: center;
 color: red;
@@ -131,7 +129,7 @@ font-weight: bold;
 font-size: 50px;
 cursor: default;
 }
-#paragraphMain {
+.paragraphMain {
 font-family: futura;
 color: red;
 font-size: 20px;
@@ -139,7 +137,7 @@ cursor: default;
 text-align: justify;
 }
 
-#tagA:hover {
+.tagA:hover {
 text-decoration: underline;
 cursor: pointer;
 }
@@ -185,12 +183,19 @@ background: #dc1b1b;
 color: #dc1b1b;
 background: lightgrey;
 }
+#recipeDiv {
+position: absolute;
+top: 80px;
+left: 20%;
+width: 60%;
+visibility: hidden;
+}
 </style>
 </head>
 <body>
 <div id="topNav">
 <button class="topBar" id="home" onclick="reloadPage()">Fots</button>
-<button class="topBar" id="recipes">Recipes</button>
+<button class="topBar" id="recipes" onclick="recipes()">Recipes</button>
 <button class="topBar" id="store">Store</button>
 <button class="topBar" id="more">More</button>
 <button id="cart" onclick="openPreview()">Cart(<span id="cartAmount">0</span>)</button>
@@ -204,14 +209,29 @@ background: lightgrey;
 <div id="leftDiv"></div>
 <div id="rightDiv"></div>
 <div id="centerDiv">
-<h1 id="top">food + shots = FOTS</h1><br>
-<p id="paragraphMain">Welcome to the new Fots website. Now you can never spend another day fotless because there is a wide selection of Fot recipes, merchandise, and more. New merch includes Fot stickers, mugs, shirts, and Fot glasses to drink all your favorite Fots. Check out the Rispe Fot, olive Fot, and crunchy Fot under recipes. <br><span id="tagA">#ZilchingItToAFot</span></p><br><br><br>
+<h1 class="top">food + shots = FOTS</h1><br>
+<p class="paragraphMain">Welcome to the new Fots website. Now you can never spend another day fotless because there is a wide selection of Fot recipes, merchandise, and more. New merch includes Fot stickers, mugs, shirts, and Fot glasses to drink all your favorite Fots. Check out the Rispe Fot, olive Fot, and crunchy Fot under recipes. <br><span class="tagA">#ZilchingItToAFot</span></p><br><br><br>
 <a href="https://sites.google.com/view/fots-/home" target="_blank">
 <button id="tryOld">Try the original Fots website</button></a><br><br>
 <a href="https://sites.google.com/view/photon-store/fots-apps" target="_blank">
 <button id="appLink">Open Fots in the app</button></a>
-
 </div>
+
+<div id="recipeDiv">
+<h1 class="top">Fot recipes</h1>
+<p class="paragraphMain"><b>Rispe Fot</b><br>1. Crush 2 tbsp. rice crispies<br>2. Pour the rice crispie dust into a shot glass.<br>3. Now it is a Fot<br>4. Drink your Fot!</p>
+<br><br><br>
+
+<p class="paragraphMain"><b>Olive Fot</b><br>1. Crush 2 tbsp. of olives<br>2. Pour the pulped olive chunks into a shot glass.<br>3. Now it is a Fot<br>4. Drink your Fot!</p>
+<br><br><br>
+
+<p class="paragraphMain"><b>Chocolate Fot</b><br>1. Pour unsweetened cocoa powder into a shot glass<br>2. Mix it a lot.<br>3. Now it is a Fot<br>4. Drink your Fot!<br>WARNING! This is a very dry Fot so don't choke or inhale too much cocoa powder.</p>
+<br><br><br>
+</div>
+
+
+
+
 
 <a href="https://lb123658.github.io/Share-on-social-media/">
 <button id="sharePage" onclick="shareLink()" name="https://lb123658.github.io/Fots/" title="Share this website">Share</button>
@@ -237,6 +257,12 @@ function shareLink() {
   document.execCommand("copy");
   alert("Share this page: " + copyText.value);
 }  
+
+function recipes()
+{
+document.getElementById("centerDiv").style.visibility = "hidden";
+document.getElementById("recipeDiv").style.visibility = "visible";
+}
 </script>
 
 <input type="text" id="pageLink" value="https://lb123658.github.io/Fots/" hidden>
