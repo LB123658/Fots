@@ -58,3 +58,6 @@ document.getElementById("elFot").style.visibility = "hidden";
 document.getElementById("recipeDiv").style.visibility = "hidden";
 document.getElementById("cartContents").style.visibility = "visible";
 }
+function mailUs() {
+  alert("Mail us at fotsofficial671@gmail.com!");
+}
