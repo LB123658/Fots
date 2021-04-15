@@ -1,11 +1,3 @@
-HOW TO INSTALL FOTSAPP FOR A MAC COMPUTER
-
-OPEN THE SCRIPT EDITOR APP
-    1. press ⌘ + space and type "Script Editor" to find the app
-    2. Click "New document" to create a new file
-COPY AND PASTE THE FOLLOWING CODE AND PASTE IT INTO SCRIPT EDITOR
-
-
 display dialog "Sign into FotsApp with your Apple Id" default answer "" buttons {"Sign in"}
 set p to the text returned of the result
 if p = "password" then
@@ -27,15 +19,3 @@ if p = "password" then
 else
 	display dialog "Incorrect password" buttons {"Close"}
 end if
- 
- 
- GO TO "FILE" IN THE TOP MENU AND SELECT "SAVE"
- SELECT "APPLICATION" AS THE FILE TYPE (not script)
- CLICK ON THE NEW FILE TO OPEN THE APP
- 
- MOVE THE FILE TO THE APPLICATIONS FOLDER
- 
- NOW FOTSAPP HAS OFFICIALLY BEEN INSTALLED
- 
- 
- *****************************************
