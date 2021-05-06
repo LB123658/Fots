@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fots</title>
+<link rel='icon' href='https://drive.google.com/thumbnail?id=1_uXBFbx-2fDh-ToXiNJtapD21qamOd71' type='image/png'/>
+<style>
+#nav {
+position: fixed;
+top: 0px;
+left: 0px;
+width: 90px;
+height: 75px;
+background: #dc1b1b;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 0px 0px 7px 0px;
+}
+.top {
+height: 65px;
+font-size: 25px;
+color: white;
+border: none;
+background: transparent;
+border-radius: 7px;
+cursor: pointer;
+}
+#title {
+position: absolute;
+top: 5px;
+left: 5px;
+width: 80px;
+font-weight: bold;
+}
+#products {
+position: absolute;
+top: 5px;
+left: 100px;
+width: 120px;
+color: black;
+}
+#about {
+position: absolute;
+top: 5px;
+left: 230px;
+width: 120px;
+color: black;
+}
+#food {
+position: absolute;
+top: 5px;
+left: 360px;
+width: 120px;
+color: black;
+}
+#signIn {
+position: fixed;
+top: 0px;
+right: 0px;
+height: 75px;
+background: #dc1b1b;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-size: 20px;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 0px 0px 0px 7px;
+font-weight: bold;
+}
+#text {
+position: absolute;
+top: 120px;
+left: 0px;
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+color: #dc1b1b;
+font-family: futura;
+font-size: 25px;
+text-align: justify;
+}
+</style>
+</head>
+<body>
+<div id="nav">
+<button class="top" id="title">Fots</button>
+<button class="top" id="products" onmouseover="a()" onmouseout="b()">Products</button>
+<button class="top" id="about" onmouseover="c()" onmouseout="d()">About</button>
+<button class="top" id="food" onmouseover="e()" onmouseout="f()">Food</button>
+</div>
+<a href="sign-in.html">
+<button id="signIn">Sign in</button></a>
+
+<p id="text">FOOD + SHOTS = FOTS<br><br>Welcome to the official Fots website. Now you will never spend another day fotless because there is a wide selection of Fot recipes, merchandise, and more. New merch includes Fot stickers, mugs, shirts, and Fot glasses to drink all your favorite Fots. Check out the Rispe Fot, olive Fot, and crunchy Fot under recipes. Just look up "Fots Official" on YouTube to find our official channel.<br>
+#ZilchingItToAFot</p>
+
+<script>
+var nav = document.getElementById("nav");
+var pro = document.getElementById("products");
+var abo = document.getElementById("about");
+var foo = document.getElementById("food");
+function a() {
+nav.style.width = "225px";
+pro.style.color = "white";
+}
+function b() {
+nav.style.width = "90px";
+pro.style.color = "black";
+}
+function c() {
+nav.style.width = "355px";
+abo.style.color = "white";
+pro.style.color = "white";
+}
+function d() {
+nav.style.width = "90px";
+abo.style.color = "black";
+pro.style.color = "black";
+}
+function e() {
+nav.style.width = "485px";
+abo.style.color = "white";
+pro.style.color = "white";
+foo.style.color = "white";
+}
+function f() {
+nav.style.width = "90px";
+abo.style.color = "black";
+pro.style.color = "black";
+foo.style.color = "black";
+}
+</script>
+</body>
+</html>
