@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="t">Fots account</title>
+<link rel='icon' href='https://drive.google.com/thumbnail?id=1_uXBFbx-2fDh-ToXiNJtapD21qamOd71' type='image/png'/>
+<style>
+#title {
+color: #dc1b1b;
+font-size: 30px;
+font-family: futura;
+}
+</style>
+<body>
+<p id="title">Welcome to your personal Fots account...</p>
+
+<script>
+var text = document.getElementById("title");
+text.innerHTML = "Welcome to your personal Fots account, " + location.search.split("=")[1];
+document.getElementById("t").innerHTML = location.search.split("=")[1] + " at Fots";
+</script>
+</body>
+</html>
