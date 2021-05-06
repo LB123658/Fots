@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fots sign in</title>
+<link rel='icon' href='https://drive.google.com/thumbnail?id=1_uXBFbx-2fDh-ToXiNJtapD21qamOd71' type='image/png'/>
+<style>
+#div {
+position: absolute;
+top: 15%;
+height: 70%;
+left: 50%;
+width: 400px;
+margin-left: -200px;
+border: 2px solid #dc1b1b;
+border-radius: 7px;
+}
+#choose {
+color: #dc1b1b;
+font-family: futura;
+position: absolute;
+top: 10px;
+left: 0px;
+width: 100%;
+text-align: center;
+font-size: 20px;
+user-select: none;
+}
+#username {
+position: absolute;
+top: 40%;
+left: 50%;
+margin-left: -180px;
+width: 350px;
+height: 30px;
+border: 2px solid #dc1b1b;
+color: grey;
+font-size: 20px;
+border-radius: 5px;
+}
+#username:focus {
+border: 2px solid #4285f4;
+outline-width: 0;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#enter {
+position: absolute;
+bottom: 40px;
+right: 20px;
+height: 40px;
+width: 70px;
+font-size: 18px;
+background: #dc1b1b;
+border-radius: 6px;
+color: white;
+border: none;
+cursor: pointer;
+}
+#enter:hover {
+opacity: 0.9;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+</head>
+<body>
+<div id="div">
+<p id="choose">Enter your Fots account</p>
+<form action="https://lb123658.github.io/Fots/home" id="form" autocomplete="off">
+<input type="text" id="username" name="user" placeholder="Username">
+</form>
+<button type="submit" form="form" id="enter">Next</button>
+</div>
+
+</body>
+</html>
