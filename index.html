@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fots - official site</title>
+<link rel="icon" href="https://lb123658.github.io/Fots/logo.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
+<style>
+* {
+font-family: 'Heebo', sans-serif;
+}
+p {
+cursor: default;
+user-select: none;
+-webkit-user-select: none;
+}
+#top {
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 70px;
+background: #dc1b1b;
+z-index: 1;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+overflow: hidden;
+}
+.option {
+height: 50px;
+background: transparent;
+border-radius: 25px;
+min-width: 150px;
+margin: 10px 5px 10px 5px;
+border: none;
+font-size: 25px;
+color: white;
+}
+.option:hover {
+background: white;
+color: red;
+}
+#cart {
+float: right;
+background: white;
+color: red;
+transition: transform .2s;
+}
+#cart:hover {
+transform: scale(1.06);
+}
+
+#dropdown {
+position: absolute;
+top: 60px;
+left: 170px;
+width: 150px;
+border-radius: 25px;
+background: white;
+z-index: 2;
+padding: 20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+visibility: hidden;
+}
+.page {
+width: 100%;
+background: transparent;
+border: none;
+height: 40px;
+font-size: 20px;
+text-align: left;
+border-radius: 10px;
+}
+.page:hover {
+color: white;
+background: #dc1b1b;
+}
+</style>
+</head>
+<body>
+<div id="top">
+  <button class="option" id="logo" onclick="location.reload();">Fots</button>
+  <button class="option" onmouseover="show()" onmouseout="hide()">More</button>
+  <button class="option" id="cart">Cart</button>
+</div>
+<div id="dropdown" onmouseover="show()" onmouseout="hide()">
+  <button class="page">About</button>
+  <button class="page">Recipies</button>
+  <button class="page">Store</button>
+</div>
+<script>
+function show() {
+document.getElementById("dropdown").style.visibility = "visible";
+}
+function hide() {
+document.getElementById("dropdown").style.visibility = "hidden";
+}
+</script>
+</body>
+</html>
