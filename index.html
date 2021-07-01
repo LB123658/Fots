@@ -26,6 +26,9 @@ z-index: 1;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 overflow: hidden;
 }
+#logo {
+font-weight: bold;
+}
 .option {
 height: 50px;
 background: transparent;
@@ -75,19 +78,57 @@ border-radius: 10px;
 color: white;
 background: #dc1b1b;
 }
+#div {
+position: absolute;
+top: 90px;
+width: 80%;
+left: 10%;
+}
+#heading {
+font-size: 30px;
+text-align: center;
+font-weight: bold;
+color: #dc1b1b;
+}
+.text {
+color: #dc1b1b;
+font-size: 20px;
+line-height: 1.7;
+}
 </style>
 </head>
 <body>
 <div id="top">
   <button class="option" id="logo" onclick="location.reload();">Fots</button>
   <button class="option" onmouseover="show()" onmouseout="hide()">More</button>
+  <a href="#">
+    <button class="option">Sign in</button>
+  </a>
   <button class="option" id="cart">Cart</button>
 </div>
 <div id="dropdown" onmouseover="show()" onmouseout="hide()">
-  <button class="page">About</button>
-  <button class="page">Recipies</button>
-  <button class="page">Store</button>
+  <a href="#">
+    <button class="page">About</button>
+  </a>
+  <a href="#">
+    <button class="page">Recipies</button>
+  </a>
+  <a href="#">
+    <button class="page">Store</button>
+  </a>
+  <a href="mailto:fotsofficial671@gmail.com" target="_blank">
+    <button class="page">Contact us</button>
+  </a>
+  <a href="#">
+    <button class="page">Sign in</button>
+  </a>
 </div>
+<!-- main text -->
+<div id="div">
+  <p id="heading">food + shots = FOTS</p>
+  <p class="text">Welcome to the official Fots site!<br>You will never spend another day fotless because virtual Fots are now here<br><br>The word FOTS is a combination of the "food" and "shots" because they are dried, crushed up food in a shot glass. Fots are usually dry and crushed to make them drinkable food but Fots such as the Olive Fot and Meat Fot are wet.<br>The first Fot ever made was the Rispe Fot made of crushed rice crispies in a Fot glass. Always be careful when fotting Fots because they can be dry and dusty. The Chocolate Fot made of cocoa powder is very powdery and can get in your eyes. Fots are generally safe because they are drinkable food and they taste great.<br><br>The new Fots are here.</p>
+</div>
+
 <script>
 function show() {
 document.getElementById("dropdown").style.visibility = "visible";
