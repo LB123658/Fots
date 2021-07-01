@@ -150,7 +150,7 @@ username.focus();
 // add function to continue button
 if (window.location.search == "?use=create_account") {
 document.getElementById("continue").addEventListener("click", createAccount);
-document.getElementById("make").remove();
+document.getElementById("make").style.visibility = "hidden";
 document.getElementById("heading").innerHTML = "Create account";
 } else {
 document.getElementById("continue").addEventListener("click", signIn);
