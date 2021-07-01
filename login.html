@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -137,11 +138,16 @@ background: #e3dcdc;
   <input type="password" id="password" placeholder="Password" autocomplete="off">
   <br>
   <br>
-  <button class="option">Continue</button>
+  <button class="option" onclick="signIn()">Continue</button>
   <button class="option" style="background: white; color:#dc1b1b;">Create account</button>
 </div>
 
 <script>
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+
+username.focus();
+
 function show() {
 document.getElementById("dropdown").style.visibility = "visible";
 }
@@ -149,6 +155,16 @@ function hide() {
 document.getElementById("dropdown").style.visibility = "hidden";
 }
 // sign in part
+function signIn() {
+if (localStorage.getItem("fots_account").split(":")[0] == password.value) {
+localStorage.setItem("signed_in", "yes");
+location.replace("https://lb123658.github.io/Fots");
+} else {
+document.getElementById("heading").innerHTML = "*Incorrect password";
+password.value = "";
+password.focus();
+}
+}
 </script>
 </body>
 </html>
