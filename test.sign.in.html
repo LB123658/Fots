@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fots | sign in</title>
+<link rel="icon" href="https://lb123658.github.io/Fots/logo.png" type="image/png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
+<style>
+* {
+font-family: 'Heebo', sans-serif;
+}
+p {
+cursor: default;
+user-select: none;
+-webkit-user-select: none;
+}
+#top {
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 70px;
+background: #dc1b1b;
+z-index: 1;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+overflow: hidden;
+}
+#logo {
+font-weight: bold;
+}
+.option {
+height: 50px;
+background: #dc1b1b;
+border-radius: 25px;
+min-width: 150px;
+margin: 10px 5px 10px 5px;
+border: none;
+font-size: 25px;
+color: white;
+padding-left: 20px;
+padding-right: 20px;
+}
+.option:hover {
+background: white;
+color: red;
+}
+#cart {
+float: right;
+background: white;
+color: red;
+transition: transform .2s;
+}
+#cart:hover {
+transform: scale(1.06);
+}
+
+#dropdown {
+position: fixed;
+top: 60px;
+left: 170px;
+width: 150px;
+border-radius: 25px;
+background: white;
+z-index: 2;
+padding: 20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+visibility: hidden;
+}
+.page {
+width: 100%;
+background: transparent;
+border: none;
+height: 40px;
+font-size: 20px;
+text-align: left;
+border-radius: 10px;
+}
+.page:hover {
+color: white;
+background: #dc1b1b;
+}
+#div {
+position: absolute;
+top: 90px;
+width: 60%;
+left: 20%;
+}
+input {
+width: 100%;
+height: 30px;
+font-size: 20px;
+}
+input:focus {
+outline-width: 0px;
+}
+#heading {
+font-size: 40px;
+text-align: center;
+font-weight: bold;
+color: #dc1b1b;
+}
+body {
+background: #e3dcdc;
+}
+</style>
+</head>
+<body>
+<div id="top">
+  <a href="https://lb123658.github.io/Fots">
+    <button class="option" id="logo">Fots</button>
+  </a>
+  <button class="option" onmouseover="show()" onmouseout="hide()">More</button>
+  <a href="cart">
+    <button class="option" id="cart">Cart</button>
+  </a>
+</div>
+<div id="dropdown" onmouseover="show()" onmouseout="hide()">
+  <a href="about">
+    <button class="page">About</button>
+  </a>
+  <a href="recipies">
+    <button class="page">Recipies</button>
+  </a>
+  <a href="store">
+    <button class="page">Store</button>
+  </a>
+  <a href="mailto:fotsofficial671@gmail.com" target="_blank">
+    <button class="page">Contact us</button>
+  </a>
+</div>
+<!-- main text -->
+<div id="div">
+  <p id="heading">Sign in</p><br>
+  <input type="text" id="username" placeholder="Username" autocomplete="off">
+  <br><br>
+  <input type="password" id="password" placeholder="Password" autocomplete="off">
+  <br>
+  <br>
+  <button class="option" id="continue">Continue</button>
+  <button class="option" style="background: white; color:#dc1b1b;" onclick="createButton()" id="make">Create account</button>
+</div>
+
+<script>
+var username = document.getElementById("username");
+var password = document.getElementById("password");
+
+username.focus();
+
+// add function to continue button
+if (window.location.search == "?use=create_account") {
+document.getElementById("continue").addEventListener("click", createAccount);
+document.getElementById("make").remove();
+document.getElementById("heading").innerHTML = "Create account";
+} else {
+document.getElementById("continue").addEventListener("click", signIn);
+}
+
+function show() {
+document.getElementById("dropdown").style.visibility = "visible";
+}
+function hide() {
+document.getElementById("dropdown").style.visibility = "hidden";
+}
+// sign in part
+function signIn() {
+if (localStorage.getItem("fots_account").split(":")[0] == password.value) {
+localStorage.setItem("signed_in", "yes");
+location.replace("https://lb123658.github.io/Fots");
+} else {
+document.getElementById("heading").innerHTML = "*Incorrect password";
+password.value = "";
+password.focus();
+}
+}
+function createButton() {
+window.location.search == "?use=create_account";
+}
+function createAccount() {
+localStorage.setItem("fots_account", password.value + ":" + username.value);
+}
+</script>
+</body>
+</html>
