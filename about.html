@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -130,7 +131,7 @@ line-height: 1.7;
 <!-- main text -->
 <div id="div">
   <p id="heading" class="big">F O O D + S H O T S = F O T S</p>
-  <p class="text">Welcome to the official Fots site!<br>You will never spend another day fotless because virtual Fots are now here<br><br>The word FOTS is a combination of the "food" and "shots" because they are dried, crushed up food in a shot glass. Fots are usually dry and crushed to make them drinkable food but Fots such as the Olive Fot and Meat Fot are wet.<br>The first Fot ever made was the Rispe Fot made of crushed rice crispies in a Fot glass. Always be careful when fotting Fots because they can be dry and dusty. The Chocolate Fot made of cocoa powder is very powdery and can get in your eyes. Fots are generally safe because they are drinkable food and they taste great.<br><br>The new Fots are here.</p>
+  <p class="text" id="main">Welcome to the official Fots site!<br>You will never spend another day fotless because virtual Fots are now here.<br><br>The word FOTS is a combination of the "food" and "shots" because they are dried, crushed up food in a shot glass. Fots are usually dry and crushed to make them drinkable food but Fots such as the Olive Fot and Meat Fot are wet.<br>The first Fot ever made was the Rispe Fot made of crushed rice crispies in a Fot glass. Always be careful when fotting Fots because they can be dry and dusty. The Chocolate Fot made of cocoa powder is very powdery and can get in your eyes. Fots are generally safe because they are drinkable food and they taste great.<br><br>The new Fots are here.</p>
 </div>
 
 <script>
@@ -139,6 +140,15 @@ document.getElementById("dropdown").style.visibility = "visible";
 }
 function hide() {
 document.getElementById("dropdown").style.visibility = "hidden";
+}
+//other languages
+if (window.location.search == "?l=es") {
+espanol();
+}
+
+//language functions
+function espanol() {
+document.getElementById("main").innerHTML = "Bienvenidos al sitio web oficial de Fots!<br>Nunca necesitas pasar otro día sin Fots porque ahora hay Fots virtuales.<br><br>La palabra FOTS es una combinación de los palabras en inglés 'food' and 'shots' que significan 'comida' y 'bebidas pequeñas'. Fots son comida seca en polvo en un vaso pequeño. Normalmente están secos pero los Fots de carne o olívas están mojadas.<br>El primer Fot fue el Rispe Fot de Rice Crispies en un vaso de Fots. Siempre ten cuidado tomando Fots porque son muy secos y el polvo puede dañar a los ojos. Por ejemplo el Fot de chocolate porque se hace de polvo de cacao. Sin embargo los Fots son saludables y el sabor es muy bueno.<br><br><br>Los Fots nuevos están aquí.";
 }
 </script>
 </body>
