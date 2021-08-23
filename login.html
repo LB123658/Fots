@@ -137,8 +137,8 @@ background: #e3dcdc;
   <input type="password" id="password" placeholder="Password" autocomplete="off">
   <br>
   <br>
-  <button class="option" id="continue">Continue</button>
-  <button class="option" style="background: white; color:#dc1b1b;" onclick="createButton()" id="make">Create account</button>
+  <button class="option" id="continue" onclick="signIn()">Continue</button>
+  <button class="option" style="background: white; color:#dc1b1b;" onclick="createAccount()" id="make">Create account</button>
 </div>
 
 <script>
@@ -173,9 +173,6 @@ document.getElementById("heading").innerHTML = "*Incorrect password";
 password.value = "";
 password.focus();
 }
-}
-function createButton() {
-location.replace("https://lb123658.github.io/Fots/login?use=create_account");
 }
 function createAccount() {
 localStorage.setItem("fots_account", password.value + ":" + username.value);
