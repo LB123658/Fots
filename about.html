@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +52,9 @@ transition: transform .2s;
 #cart:hover {
 transform: scale(1.06);
 }
-
+#cart:focus {
+transform: scale(1);
+}
 #dropdown {
 position: fixed;
 top: 60px;
@@ -104,9 +105,6 @@ line-height: 1.7;
     <button class="option" id="logo">Fots</button>
   </a>
   <button class="option" onmouseover="show()" onmouseout="hide()">More</button>
-  <a href="login">
-    <button class="option" id="signIn">Sign in</button>
-  </a>
   <a href="cart">
     <button class="option" id="cart">Cart</button>
   </a>
@@ -124,8 +122,8 @@ line-height: 1.7;
   <a href="mailto:fotsofficial671@gmail.com" target="_blank">
     <button class="page">Contact us</button>
   </a>
-  <a href="login">
-    <button class="page">Sign in</button>
+  <a href="about?l=es">
+    <button class="page">En español</button>
   </a>
 </div>
 <!-- main text -->
